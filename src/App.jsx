@@ -67,15 +67,17 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 
 const App = () => {
-  let [count,setCount] = useState(0)
-  let [bg,setBg] = useState("dark")
+  const [count,setCount] = useState(0)
+  // let [count,setCount] = useState(0)
+  const [bg,setBg] = useState("dark")
 
   useEffect(()=>{
     console.log("UseEffect is working");
     
   },[count])
   const countClick =()=>{
-    setCount(++count)
+    setCount((curr)=>++curr)
+    // setCount(++count)
     console.log(count);
     
   }
